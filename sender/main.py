@@ -1,7 +1,6 @@
 import network
 from machine import Pin
 import time
-import ujson
 from umqtt.simple import MQTTClient
 
 MQTT_ID_CLIENT = 'micropython-presence-demo'
