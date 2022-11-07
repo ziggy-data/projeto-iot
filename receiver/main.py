@@ -11,8 +11,8 @@ MQTT_TOPICO    = 'presenca'
 
 led = Pin(13, Pin.OUT)
 
+# Recebe as mensagens do topico que esta inscrito e vai retornar nesse callback
 def sub_cb(topic, msg):
-    print(msg)
     if msg == b'on':
         led.on()
     else:
@@ -26,7 +26,7 @@ sta_if.connect("Wokwi-GUEST",'')
 while not sta_if.isconnected():
     print(".", end='')
     time.sleep(0.1)
-print('conectado!')    
+print('Conectado!')    
 
 print("Conectando ao servidor MQTT... ")
 cliente = MQTTClient(MQTT_ID_CLIENT,
@@ -34,14 +34,14 @@ cliente = MQTTClient(MQTT_ID_CLIENT,
                         user = MQTT_USUARIO,
                         password=MQTT_SENHA)
 
-cliente.connect()  
-cliente.set_callback(sub_cb)
-cliente.subscribe(MQTT_TOPICO)
+cliente.connect() # Realiza a conexão com serviço de mensageria
+cliente.set_callback(sub_cb) #Configura o metodo de callback para assim que receber as mensagem realizar o método
+cliente.subscribe(MQTT_TOPICO)  #Realiza a inscrição do tópico para receber as mensagens
 print("Conectado ao servidor")
 
 while True:
-    print("checando")
-    cliente.wait_msg()
+    print("Esperando uma nova mensagem...")
+    cliente.wait_msg() #Fica aguardando as mensagens do serviço de mensageria
 
 
      
