@@ -39,11 +39,7 @@ acenderá o LED.
 
 ## Considerações Finais
 
-Mensageria foi escolhida principalmente pelo fato de ser uma forma simples de implementar,
-e também permite que escale o tamanho do produto final da forma como desejar.
-Pode-se também modificar os terminais, trocando o led por um relé, que acionaria um
-ventilador (ou qualquer outro dispositivo) e o sensor por um programa no celular que seria
-como se fosse o botão “LIGAR/DESLIGAR”.
+Mensageria foi escolhida principalmente pelo fato de ser uma forma simples de implementar, MicroPython que possui uma implementação para iot mais eficiente e enxuta que o Python completo, e também permite que escale o tamanho do produto final da forma como desejar. Pode-se também modificar os terminais, trocando o led por um relé, que acionaria um ventilador (ou qualquer outro dispositivo) e o sensor por um programa no celular que seria como se fosse o botão “LIGAR/DESLIGAR”.
 
 
 
