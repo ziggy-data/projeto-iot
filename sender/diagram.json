@@ -1,39 +1,22 @@
 {
-    "version": 1,
-    "author": "Anonymous maker",
-    "editor": "wokwi",
-    "parts": [
-      {
-        "type": "wokwi-esp32-devkit-v1",
-        "id": "esp",
-        "top": 0,
-        "left": 0,
-        "attrs": { "env": "micropython-20220618-v1.19.1" }
-      },
-      { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -43.16, "left": 147.7, "attrs": {} },
-      {
-        "type": "wokwi-led",
-        "id": "led1",
-        "top": -54.65,
-        "left": -140.4,
-        "attrs": { "color": "red" }
-      },
-      {
-        "type": "wokwi-resistor",
-        "id": "r1",
-        "top": 77.28,
-        "left": -87.78,
-        "attrs": { "value": "300" }
-      }
-    ],
-    "connections": [
-      [ "esp:TX0", "$serialMonitor:RX", "", [] ],
-      [ "esp:RX0", "$serialMonitor:TX", "", [] ],
-      [ "esp:3V3", "pir1:VCC", "green", [ "v-2.3", "h81.21" ] ],
-      [ "esp:GND.1", "pir1:GND", "black", [ "h0" ] ],
-      [ "pir1:OUT", "esp:D4", "green", [ "v0" ] ],
-      [ "led1:A", "r1:1", "green", [ "v0" ] ],
-      [ "r1:2", "esp:D13", "green", [ "v0" ] ],
-      [ "led1:C", "esp:GND.1", "black", [ "v0" ] ]
-    ]
-  }
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20220618-v1.19.1" }
+    },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -43.16, "left": 147.7, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "pir1:VCC", "green", [ "v-2.3", "h81.21" ] ],
+    [ "esp:GND.1", "pir1:GND", "black", [ "h0" ] ],
+    [ "pir1:OUT", "esp:D4", "green", [ "v0" ] ]
+  ]
+}
