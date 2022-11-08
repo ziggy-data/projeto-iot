@@ -11,7 +11,6 @@ MQTT_TOPICO    = 'presenca'
 
 # Configura a pinagem dos itens utilizados no código
 sensor = Pin(4, Pin.IN) 
-led = Pin(13, Pin.OUT)
 
 print("conectando ao WIFI", end="")
 sta_if = network.WLAN(network.STA_IF)
@@ -35,10 +34,7 @@ while True:
     # Vai verificar se o sensor de presença 'percebeu' alguém no ambiente e
     # imprime uma mensagem e envia a mensagem para acender um led (com o dispositivo 'receiver')
     if sensor.value() == 1:
-        print("Welcome home, Master!")
-        led.on()
         #Envia em bytes a mensagem "on" para o dispositivo "receiver" receber a informação para alterar 
         cliente.publish(MQTT_TOPICO, b'on') 
         time.sleep(3)
-        led.off()
         cliente.publish(MQTT_TOPICO, b'off')
