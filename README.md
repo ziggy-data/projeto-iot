@@ -1,5 +1,24 @@
 # Projeto IOT 
 
+## Participantes do grupo
+- **Nome**: Pedro Henrique da Silva Cosinha
+- **Matrícula**: 202103174141
+
+<hr>
+
+- **Nome**: Luis André de Oliveira Siqueira
+- **Matrícula**: 201809092311
+
+<hr>
+
+- **Nome**: Reinaldo Albuquerque Simoes
+- **Matrícula**: 202104038194
+
+<hr>
+
+- **Nome**: Luiza Morgado de Castro Rosa
+- **Matrícula**: 202008447011
+
 ## Visão geral
 
 Nesse projeto foi programado 2 sistemas IOT se comunicando por mensageria e alterando dispositivos, como uma prova de conceito (os arquivos diagram.json são utilizados apenas no Wokwi, são dispensáveis para o uso do projeto). O ESP32 foi escolhido por ser uma ferramenta com melhor custo-benefício e o site Wokwi foi utilizado para simular o projeto final.
